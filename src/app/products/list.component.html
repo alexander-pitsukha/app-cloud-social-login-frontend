@@ -26,9 +26,11 @@
         <td>{{ product?.edition }}</td>
         <td>{{ product?.validFrom | date: 'dd/MM/yyyy'}}</td>
         <td>{{ product?.categoryId}}</td>
-        <td><a href="#" [routerLink]="['/products/', product.id, 'view']" class="btn btn-info m-1">View</a> <a href="#"
-                                                                                                               [routerLink]="['/products/', product.id, 'edit']"
-                                                                                                               class="btn btn-primary m-1">Edit</a>
+        <td><a href="#" [routerLink]="['/products/', product.id, 'view']" class="btn btn-info m-1">View</a>
+          <a href="#" [routerLink]="['/products/', product.id, 'order']" class="btn btn-info m-1">View With Order</a>
+          <a href="#"
+             [routerLink]="['/products/', product.id, 'edit']"
+             class="btn btn-primary m-1">Edit</a>
           <button type="button" (click)="openDialog(product.id)" class="btn btn-danger m-1">Delete</button>
         </td>
       </tr>

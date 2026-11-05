@@ -1,0 +1,35 @@
+<div class="container">
+  <h5 class="text-center mt-3">ORDERS</h5>
+  <div class="table-responsive">
+    <table class="table table-bordered p-0 m-0">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">User Id</th>
+        <th scope="col">Razorpay Payment Id</th>
+        <th scope="col">Razorpay Order Id</th>
+        <th scope="col">Razorpay Signature</th>
+        <th scope="col">Product Id</th>
+        <th scope="col">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr scope="row" *ngFor="let order of orders">
+        <td>{{ order?.id }}</td>
+        <td>{{ order?.userId }}</td>
+        <td>{{ order?.razorpayPaymentId}}</td>
+        <td>{{ order?.razorpayOrderId }}</td>
+        <td>{{ order?.razorpaySignature }}</td>
+        <td>{{ order?.productId}}</td>
+        <td><a href="#" [routerLink]="['/orders', order.id, 'view']" class="btn btn-info m-1">View</a>
+        </td>
+      </tr>
+      <tr scope="row" *ngIf="orders.length === 0">
+        <td colspan="6" class="text-center">No record found</td>
+      </tr>
+      </tbody>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="5" [length]="totalElements"
+                   (page)="nextPage($event)"></mat-paginator>
+  </div>
+</div>

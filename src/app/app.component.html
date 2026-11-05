@@ -17,10 +17,12 @@
           Board</a></li>
         <li class="nav-item"><a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a></li>
         <li class="nav-item"><a href="/order" class="nav-link" *ngIf="isLoggedIn" routerLink="order">Order</a></li>
+        <li class="nav-item" *ngIf="showAdminBoard"><a href="/orders/list" class="nav-link" *ngIf="isLoggedIn"
+                                                       routerLink="orders">Orders</a></li>
         <li class="nav-item" *ngIf="showAdminBoard"><a href="/products/list" class="nav-link" *ngIf="isLoggedIn"
                                                        routerLink="products">Products</a></li>
         <li class="nav-item" *ngIf="showAdminBoard"><a href="/categories/list" class="nav-link" *ngIf="isLoggedIn"
-                                                       routerLink="categories">Category</a></li>
+                                                       routerLink="categories">Categories</a></li>
       </ul>
       <ul class="navbar-nav ms-auto  mb-2 mb-md-0" *ngIf="!isLoggedIn">
         <li class="nav-item"><a href="/register" class="nav-link" routerLink="register">Sign Up</a></li>

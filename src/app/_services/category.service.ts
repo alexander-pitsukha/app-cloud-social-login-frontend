@@ -16,6 +16,14 @@ export class CategoryService {
     return this.httpClient.get(AppConstants.CATEGORY_SERVICE + 'categories', {params});
   }
 
+  getWithProducts(id: number): Observable<any> {
+    return this.httpClient.get(AppConstants.CATEGORY_SERVICE + 'categories/' + id + '/with-products');
+  }
+
+  getWithProductsAndOrders(id: number): Observable<any> {
+    return this.httpClient.get(AppConstants.CATEGORY_SERVICE + 'categories/' + id + '/with-products-and-orders');
+  }
+
   create(category: any): Observable<any> {
     return this.httpClient.post(AppConstants.CATEGORY_SERVICE + 'categories', JSON.stringify(category), AppConstants.httpOptions);
   }

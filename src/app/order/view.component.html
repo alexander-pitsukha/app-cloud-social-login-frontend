@@ -1,0 +1,36 @@
+<div class="container">
+  <h5 class="text-center">ORDER DETAILS</h5>
+  <div class="table-responsive">
+    <table class="table table-bordered p-0 m-0">
+      <tbody>
+      <tr scope="row">
+        <th>ID</th>
+        <td>{{ order?.id }}</td>
+      </tr>
+      <tr scope="row">
+        <th>User Id</th>
+        <td>{{ order?.userId }}</td>
+      </tr>
+      <tr scope="row">
+        <th>Razorpay Payment Id</th>
+        <td>{{ order?.razorpayPaymentId }}</td>
+      </tr>
+      <tr scope="row">
+        <th>Razorpay Order Id</th>
+        <td>{{ order?.razorpayOrderId }}</td>
+      </tr>
+      <tr scope="row">
+        <th>Razorpay Signature</th>
+        <td>{{ order?.razorpaySignature }}</td>
+      </tr>
+      <tr scope="row">
+        <th>Product Id</th>
+        <td>{{ order?.productId }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="d-flex">
+    <a href="#" routerLink="/orders/list" class="btn btn-primary mt-2 w-100">Back</a>
+  </div>
+</div>

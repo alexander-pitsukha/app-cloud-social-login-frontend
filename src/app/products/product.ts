@@ -6,4 +6,5 @@ export interface Product {
   description: string;
   validFrom: string;
   categoryId: number;
+  orders: any[];
 }

@@ -1,0 +1,65 @@
+<div class="container">
+  <h5 class="text-center">PRODUCT DETAILS</h5>
+  <div class="table-responsive">
+    <table class="table table-bordered p-0 m-0">
+      <tbody>
+      <tr scope="row">
+        <th>ID</th>
+        <td>{{ product?.id }}</td>
+      </tr>
+      <tr scope="row">
+        <th>Name</th>
+        <td>{{ product?.name }}</td>
+      </tr>
+      <tr scope="row">
+        <th>Description</th>
+        <td>{{ product?.description }}</td>
+      </tr>
+      <tr scope="row">
+        <th>Version</th>
+        <td>{{ product?.version }}</td>
+      </tr>
+      <tr scope="row">
+        <th>Edition</th>
+        <td>{{ product?.edition }}</td>
+      </tr>
+      <tr scope="row">
+        <th>Category Id</th>
+        <td>{{ product?.categoryId }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <h6 class="text-center">ORDERS</h6>
+  <div class="table-responsive">
+    <table class="table table-bordered p-0 m-0">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">User Id</th>
+        <th scope="col">Razorpay Payment Id</th>
+        <th scope="col">Razorpay Order Id</th>
+        <th scope="col">Razorpay Signature</th>
+        <th scope="col">Product Id</th>
+        <th scope="col">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr scope="row" *ngFor="let order of product?.orders">
+        <td>{{ order?.id }}</td>
+        <td>{{ order?.userId }}</td>
+        <td>{{ order?.razorpayPaymentId}}</td>
+        <td>{{ order?.razorpayOrderId }}</td>
+        <td>{{ order?.razorpaySignature }}</td>
+        <td>{{ order?.productId}}</td>
+      </tr>
+      <tr scope="row" *ngIf="product?.orders.length === 0">
+        <td colspan="6" class="text-center">No record found</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="d-flex">
+    <a href="#" routerLink="/products/list" class="btn btn-primary mt-2 w-100">Back</a>
+  </div>
+</div>

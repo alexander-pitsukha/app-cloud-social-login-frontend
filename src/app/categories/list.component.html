@@ -17,9 +17,14 @@
         <td>{{ category?.id }}</td>
         <td>{{ category?.title }}</td>
         <td>{{ category?.description }}</td>
-        <td><a href="#" [routerLink]="['/categories/', category.id, 'view']" class="btn btn-info m-1">View</a> <a
-          href="#"
-          [routerLink]="['/categories/', category.id, 'edit']" class="btn btn-primary m-1">Edit</a>
+        <td><a href="#" [routerLink]="['/categories/', category.id, 'view']" class="btn btn-info m-1">View</a>
+          <a href="#" [routerLink]="['/categories/', category.id, 'product']" class="btn btn-info m-1">View With
+            Product</a>
+          <a href="#" [routerLink]="['/categories/', category.id, 'product-with-order']" class="btn btn-info m-1">View
+            With Product
+            and Order</a><a
+            href="#"
+            [routerLink]="['/categories/', category.id, 'edit']" class="btn btn-primary m-1">Edit</a>
           <button type="button" (click)="openDialog(category.id)" class="btn btn-danger m-1">Delete</button>
         </td>
       </tr>

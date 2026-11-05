@@ -16,6 +16,10 @@ export class ProductService {
     return this.httpClient.get(AppConstants.PRODUCT_SERVICE + 'products', {params});
   }
 
+  getWithOrders(id: number): Observable<any> {
+    return this.httpClient.get(AppConstants.PRODUCT_SERVICE + 'products/' + id + '/with-orders');
+  }
+
   create(product: any): Observable<any> {
     return this.httpClient.post(AppConstants.PRODUCT_SERVICE + 'products', JSON.stringify(product), AppConstants.httpOptions);
   }

@@ -3,7 +3,7 @@ import {CategoryService} from '../_services/category.service';
 import {Category} from './category';
 import {PageEvent} from '@angular/material/paginator';
 import {MatDialog} from '@angular/material/dialog';
-import {ConfirmationDialog} from './../dialog/confirmation-dialog.component';
+import {ConfirmationDialog} from '../dialog/confirmation-dialog.component';
 
 @Component({templateUrl: './list.component.html'})
 export class CategoryListComponent implements OnInit {

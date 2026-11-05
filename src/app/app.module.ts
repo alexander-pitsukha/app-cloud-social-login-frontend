@@ -24,9 +24,14 @@ import {TokenComponent} from './register/token.component';
 import {ProductListComponent} from './products/list.component';
 import {ProductViewComponent} from './products/view.component';
 import {ProductAddEditComponent} from './products/add-edit.component';
+import {ProductWithOrderViewComponent} from './products/view-with-order';
 import {CategoryListComponent} from './categories/list.component';
 import {CategoryViewComponent} from './categories/view.component';
 import {CategoryAddEditComponent} from './categories/add-edit.component';
+import {CategoryWithProductViewComponent} from './categories/view-with-product';
+import {CategoryWithProductAndOrderViewComponent} from './categories/view-with-product-and-order.component';
+import {OrderListComponent} from './order/list.component';
+import {OrderViewComponent} from './order/view.component';
 
 import {ConfirmationDialog} from './dialog/confirmation-dialog.component';
 import {authInterceptorProviders} from './_helpers/auth.interceptor';
@@ -48,9 +53,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ProductListComponent,
     ProductViewComponent,
     ProductAddEditComponent,
+    ProductWithOrderViewComponent,
     CategoryListComponent,
     CategoryViewComponent,
     CategoryAddEditComponent,
+    CategoryWithProductViewComponent,
+    CategoryWithProductAndOrderViewComponent,
+    OrderListComponent,
+    OrderViewComponent,
     ConfirmationDialog
   ],
   imports: [

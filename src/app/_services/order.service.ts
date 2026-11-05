@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {AppConstants} from '../common/app.constants';
 import {UserService} from './user.service';
+import {Order} from '../order/order';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -25,6 +26,15 @@ export class OrderService {
         console.error(err);
       }
     });
+  }
+
+  getAll(request): Observable<any> {
+    const params = request;
+    return this.http.get(AppConstants.ORDER_SERVICE + 'orders', {params});
+  }
+
+  find(id: number): Observable<any> {
+    return this.http.get<Order>(AppConstants.ORDER_SERVICE + 'orders/' + id);
   }
 
   createOrder(order): Observable<any> {

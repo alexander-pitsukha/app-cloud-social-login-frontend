@@ -14,9 +14,14 @@ import {TokenComponent} from './register/token.component';
 import {ProductListComponent} from './products/list.component';
 import {ProductViewComponent} from './products/view.component';
 import {ProductAddEditComponent} from './products/add-edit.component';
+import {ProductWithOrderViewComponent} from './products/view-with-order';
 import {CategoryListComponent} from './categories/list.component';
 import {CategoryViewComponent} from './categories/view.component';
 import {CategoryAddEditComponent} from './categories/add-edit.component';
+import {CategoryWithProductViewComponent} from './categories/view-with-product';
+import {CategoryWithProductAndOrderViewComponent} from './categories/view-with-product-and-order.component';
+import {OrderListComponent} from './order/list.component';
+import {OrderViewComponent} from './order/view.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -34,11 +39,17 @@ const routes: Routes = [
   {path: 'products/:id/view', component: ProductViewComponent},
   {path: 'products/add', component: ProductAddEditComponent},
   {path: 'products/:id/edit', component: ProductAddEditComponent},
+  {path: 'products/:id/order', component: ProductWithOrderViewComponent},
   {path: 'categories', redirectTo: 'categories/list', pathMatch: 'full'},
   {path: 'categories/list', component: CategoryListComponent},
   {path: 'categories/:id/view', component: CategoryViewComponent},
   {path: 'categories/add', component: CategoryAddEditComponent},
   {path: 'categories/:id/edit', component: CategoryAddEditComponent},
+  {path: 'categories/:id/product', component: CategoryWithProductViewComponent},
+  {path: 'categories/:id/product-with-order', component: CategoryWithProductAndOrderViewComponent},
+  {path: 'orders', redirectTo: 'orders/list', pathMatch: 'full'},
+  {path: 'orders/list', component: OrderListComponent},
+  {path: 'orders/:id/view', component: OrderViewComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 

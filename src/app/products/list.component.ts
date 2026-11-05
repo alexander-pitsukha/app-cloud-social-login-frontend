@@ -3,7 +3,7 @@ import {ProductService} from '../_services/product.service';
 import {Product} from './product';
 import {PageEvent} from '@angular/material/paginator';
 import {MatDialog} from '@angular/material/dialog';
-import {ConfirmationDialog} from './../dialog/confirmation-dialog.component';
+import {ConfirmationDialog} from '../dialog/confirmation-dialog.component';
 
 @Component({templateUrl: './list.component.html'})
 export class ProductListComponent implements OnInit {
